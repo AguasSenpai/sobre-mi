@@ -1,6 +1,6 @@
 /* Formato para el contenido adicional o aside */
 aside {
-    width: 30%;
+    width: 20%;
     padding-left: 0.5rem;
     margin-left: 0.5rem;
     float: right;
@@ -27,7 +27,7 @@ html {
   min-height: 100%;
   background-image: url(paper-bg.jpg);
   background-color: rgba(255,255,255,0.1);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
