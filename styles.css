@@ -1,14 +1,12 @@
-
-
 /* Formato para el contenido adicional o aside */
 aside {
-    width: 35%;
+    width: 30%;
     padding-left: 0.5rem;
     margin-left: 0.5rem;
     float: right;
     box-shadow: inset 5px 0 5px -5px #29627e;
     font-style: italic;
-    font-size: 13px;
+    font-size: 11px;
     color: #29627e;
 }
 
@@ -24,17 +22,19 @@ aside > p {
     width: 50%;
   }
 
-  /* Para colocar imágenes una al lado de la otra */
-  /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-  
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+/* Imagen de fondo (background) */
+html {
+  min-height: 100%;
+  background-image: url(paper-bg.jpg);
+  background-color: rgba(255,255,255,0.1);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+
+/* Personalizar bullet lists */
+ul {
+  list-style-type: square;
+}
