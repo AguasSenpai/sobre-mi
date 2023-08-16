@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet'>
+        <style>
+        header {
+            font-family: 'Poppins';font-size: 16px; color: #0b6fff; letter-spacing: 2px;
+            /* Sombreado para la fuente */
+            text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+            text-align: center;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>CALCULADORA</h1>
+        </header>
+
+        <article>
+            <h2>A continuación, encontrará una calculadora para realizar operaciones matemáticas: suma, resta, multiplicación y división.</h2>
+            <ul>
+                <li>Usando dos operandos:</li>
+            </ul>
+        </article>
+            
+        <script src="calculator.js"></script>
+        <div class="container">
+            <form>
+                
+                <div class="block">
+                    <p class="title">Operando 1</p>
+                    <input type="number" id="op1" required="required" minlength="1" />
+                </div>
+                <div class="block">
+                    <p class="title">Operando 2</p>
+                    <input type="number" id="op2" required="required" minlength="1" />
+                </div>
+                
+                <div class="base">
+                    <div class="enter">
+                        <input type="button" name="sumar" value="&plus;" onclick="suma()" />
+                    </div>
+                </div>
+                <div class="base">
+                    <div class="enter">
+                        <input type="button" name="restar" value="&minus;" onclick="resta()" />
+                    </div>
+                </div>
+                <div class="base">
+                    <div class="enter">
+                        <input type="button" name="multiplicar" value="&lowast;" onclick="multiplicacion()" />
+                    </div>
+                </div>
+                <div class="base">
+                    <div class="enter">
+                        <input type="button" name="dividir" value="&divide;" onclick="division()" />
+                    </div>
+                </div>
+                
+                <div id="resultado"></div>
+                
+            </form>
+        </div>
+
+        <footer>
+            <!-- REGLAS Y CONDICIONES DE LA CALCULADORA -->
+            <ul2>
+
+            </ul2>
+        </footer>
+    </body>
+</html>

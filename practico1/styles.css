@@ -1,0 +1,73 @@
+/* Imagen de fondo (background) */
+html {
+  min-height: 100%;
+  background-image: url(calculator-bg.png);
+  background-color: rgba(255,255,255,0.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+
+/* Personalizar bullet lists */
+ul {
+  list-style-type: square;
+  font-family: 'Poppins';font-size: 17px; color: black; letter-spacing: 1px;
+  margin: 20px;
+}
+
+ul2 {
+  list-style-type: square;
+  font-family: 'Poppins';font-size: 12px; color: black; letter-spacing: 1px;
+  text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
+  margin: 20px;
+}
+
+/* Personalizar texto */
+body {
+  font-family: 'Poppins';font-size: 11.5px; color: black; letter-spacing: 1px;
+  text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
+  margin: 20px;
+}
+
+/* Personalizar campos */
+.container {
+  width: 520px;
+  height: auto;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 25px;
+}
+.block {
+  width: 100px;
+  padding: 5px 20px;
+  margin-left: 5px;
+  display: block;
+}
+.base {
+  width: 100%;
+  margin: 25px;
+  overflow: hidden;
+  display: block;
+  float: none;
+}
+.block-center {
+  text-align: center;
+}
+#resultado {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.5;
+  word-spacing: 2.7px;
+  color: #0b6fff;
+}
+button {
+  margin-left: 25px;
+}
