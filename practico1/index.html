@@ -32,45 +32,40 @@
         <div class="container">
             <form>
                 
+                <!-- Sección de los operandos a completar por el usuario -->
                 <div class="block">
                     <p class="title">Operando 1</p>
-                    <input type="number" id="op1" required="required" minlength="1" />
+                    <input type="number" name="op1" id="op1" required="required" minlength="1" />
                 </div>
                 <div class="block">
                     <p class="title">Operando 2</p>
-                    <input type="number" id="op2" required="required" minlength="1" />
+                    <input type="number" name="op2" id="op2" required="required" minlength="1" />
                 </div>
                 
+                <!-- Sección de los botones de operaciones -->
                 <div class="base">
-                    <div class="enter">
-                        <input type="button" name="sumar" value="&plus;" onclick="suma()" />
-                    </div>
-                </div>
-                <div class="base">
-                    <div class="enter">
-                        <input type="button" name="restar" value="&minus;" onclick="resta()" />
-                    </div>
-                </div>
-                <div class="base">
-                    <div class="enter">
-                        <input type="button" name="multiplicar" value="&lowast;" onclick="multiplicacion()" />
-                    </div>
-                </div>
-                <div class="base">
-                    <div class="enter">
-                        <input type="button" name="dividir" value="&divide;" onclick="division()" />
-                    </div>
+                    <input type="button" name="sumar" value="&plus;" onclick="suma()" />
+                    <input type="button" name="restar" value="&minus;" onclick="resta()" />
+                    <input type="button" name="multiplicar" value="&lowast;" onclick="multiplicacion()" />
+                    <input type="button" name="dividir" value="&divide;" onclick="division()" />
                 </div>
                 
+                <!-- Donde se mostrará el resultado -->
                 <div id="resultado"></div>
                 
             </form>
         </div>
 
+        <!-- NOTA PARA AYUDANTE: Si bien esta versión será la entregada en el trabajo, igualmente seguiré mejorando la página, permitiendo más operandos y agregando más funcionalidades (otros símbolos y operaciones). -->
+
         <footer>
             <!-- REGLAS Y CONDICIONES DE LA CALCULADORA -->
             <ul2>
-
+                <p>IMPORTANTE:</p>
+                <li>Debes completar ambos campos (operandos 1 y 2) antes de seleccionar la operación a realizar. Sólo se permiten números en estos campos.</li>
+                <li>Los operandos pueden ser números enteros (por ejemplo, 21) o números con decimales (por ejemplo, 4.2). Para separar la parte entera de la decimal, debes usar un punto.</li>
+                <li>Cada botón realizará una operación distinta: suma o adición (&plus;), resta o sustracción (&minus;), multiplicación (&lowast;), y división (&divide;).</li>
+                <li>Luego de realizar alguna operación, para volver a utilizar la calculadora simplemente coloca los operandos que necesites y elige la operación correspondiente, no es necesario actualizar la página.</li>
             </ul2>
         </footer>
     </body>

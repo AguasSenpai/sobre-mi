@@ -1,47 +1,75 @@
-const op1 = parseFloat(document.getElementById("op1"));
-const op2 = parseFloat(document.getElementById("op2"));
-let resultado;
+/* Función para el botón de SUMA */
 
 function suma() {
 
-    if (isNaN(op1) || isNaN(op2)) {
-        alert("¡Intenta nuevamente! Uno de los valores introducidos no es un número.");
+    var op1 = parseFloat(document.getElementById("op1").value);
+    var op2 = parseFloat(document.getElementById("op2").value);
+    var result = document.getElementById("resultado").innerHTML;
+
+    var result = (op1 + op2).toFixed(8);
+    
+    if (!document.getElementById("op1").value || !document.getElementById("op2").value) {
+        alert("¡Intenta nuevamente! Debes completar ambos campos.");
     } else {
-        resultado = op1 + op2;
-        document.getElementById("resultado").innerHTML = "El resultado es " + resultado + ".";
+        document.getElementById("resultado").innerHTML = "El resultado es " + result + ".";
     }
 
 }
+
+/* Función para el botón de RESTA */
 
 function resta() {
 
-    if (isNaN(op1) || isNaN(op2)) {
-        alert("¡Intenta nuevamente! Uno de los valores introducidos no es un número.");
+    var op1 = parseFloat(document.getElementById("op1").value);
+    var op2 = parseFloat(document.getElementById("op2").value);
+    var result = document.getElementById("resultado").innerHTML;
+
+    var result = (op1 - op2).toFixed(8);
+    
+    if (!document.getElementById("op1").value || !document.getElementById("op2").value) {
+        alert("¡Intenta nuevamente! Debes completar ambos campos.");
     } else {
-        resultado = op1 - op2;
-        document.getElementById("resultado").innerHTML = "El resultado es " + resultado + ".";
+        document.getElementById("resultado").innerHTML = "El resultado es " + result + ".";
     }
 
 }
+
+/* Función para el botón de MULTIPLICACIÓN */
 
 function multiplicacion() {
 
-    if (isNaN(op1) || isNaN(op2)) {
-        alert("¡Intenta nuevamente! Uno de los valores introducidos no es un número.");
+    var op1 = parseFloat(document.getElementById("op1").value);
+    var op2 = parseFloat(document.getElementById("op2").value);
+    var result = document.getElementById("resultado").innerHTML;
+    
+    var result = (op1 * op2).toFixed(8);
+    
+    if (!document.getElementById("op1").value || !document.getElementById("op2").value) {
+        alert("¡Intenta nuevamente! Debes completar ambos campos.");
     } else {
-        resultado = op1 * op2;
-        document.getElementById("resultado").innerHTML = "El resultado es " + resultado + ".";
+        document.getElementById("resultado").innerHTML = "El resultado es " + result + ".";
     }
 
 }
 
+/* Función para el botón de DIVISIÓN */
+
 function division() {
 
-    if (isNaN(op1) || isNaN(op2)) {
-        alert("¡Intenta nuevamente! Uno de los valores introducidos no es un número.");
+    var op1 = parseFloat(document.getElementById("op1").value);
+    var op2 = parseFloat(document.getElementById("op2").value);
+    var result = document.getElementById("resultado").innerHTML;
+    
+    var result = (op1 / op2).toFixed(8);
+    
+    /* Mensaje de alerta si no se completaron ambos campos de operandos */
+    if (!document.getElementById("op1").value || !document.getElementById("op2").value) {
+        alert("¡Intenta nuevamente! Debes completar ambos campos.");
+    } else if (document.getElementById("op2").value == "0") {
+        /* Mensaje de alerta si el usuario quiere dividir entre cero */
+        alert("Recuerda que una división entre cero resulta en un valor indefinido. Intenta nuevamente con otro divisor.");
     } else {
-        resultado = op1 / op2;
-        document.getElementById("resultado").innerHTML = "El resultado es " + resultado + ".";
+        document.getElementById("resultado").innerHTML = "El resultado es " + result + ".";
     }
 
 }

@@ -49,8 +49,9 @@ body {
   width: 100%;
   margin: 25px;
   overflow: hidden;
-  display: block;
+  display: inline-block;
   float: none;
+  text-align: center;
 }
 .block-center {
   text-align: center;
@@ -68,6 +69,12 @@ body {
   word-spacing: 2.7px;
   color: #0b6fff;
 }
-button {
-  margin-left: 25px;
+input[type="button"] {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #4b92d5;
+  color: #ffffff;
+  padding: 7px 8px;
+  font-size: 16px;
 }
