@@ -1,0 +1,95 @@
+/* Texto */
+
+header {
+  font-family: 'Handjet', cursive; font-size: 24px; color: #0b6fff; letter-spacing: 2px;
+  /* Sombreado para la fuente */
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+  text-align: center;
+}
+
+body {
+  font-family: 'Handjet', cursive; font-size: 18px; color: black; letter-spacing: 1px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Background */
+
+html {
+  min-height: 100%;
+  background-image: url(bg.jpg);
+  background-color: rgba(255,255,255,0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+
+/* Secciones específicas */
+
+.container {
+  width: 520px;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.block {
+  width: 500px;
+  padding: 5px;
+  margin-left: 5px;
+  display: block;
+  writing-mode: horizontal-tb;
+  box-sizing: content-box;
+}
+
+.base {
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  float: none;
+  text-align: center;
+}
+
+input[type=button] {
+  border: none;
+  height: 70px;
+  width: 70px;
+  text-decoration: none;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.botonPiedra {
+  background: url(rock.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+}
+
+.botonPapel {
+  background: url(paper.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+}
+
+.botonTijera {
+  background: url(scissor.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+}
+
+.resultado {
+  font-family: 'Handjet', cursive; font-size: 40px; color: black; letter-spacing: 1px;
+  margin: 20px;
+  text-align: center;
+}

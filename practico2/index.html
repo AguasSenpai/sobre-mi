@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <title>Piedra, Papel o Tijera</title>
+        <!-- Estilo, fuente e ícono -->
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="icon.png">
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>¿PIEDRA, PAPEL O TIJERA?</h1>
+        </header>
+
+        <script src="juegoppot.js"></script>
+        
+        <article>
+            
+            <!-- Espacio para nombre de jugador -->
+            <h1>Coloque su nombre:</h1>
+            
+            <div class="container">
+                <div class="block">
+                    <input type="text" name="player" id="player" required="required" style="width: 450px;"/>
+                </div>
+            </div>
+            
+            <!-- Espacio para seleccionar jugada -->
+            <h1>Elija su jugada:</h1>
+            <div class="base">
+                <input type="button" name="piedra" class="botonPiedra" onclick="jugadaPiedra()"/>
+                <input type="button" name="papel" class="botonPapel" onclick="jugadaPapel()"/>
+                <input type="button" name="tijera" class="botonTijera" onclick="jugadaTijera()"/>
+            </div>
+
+            <!-- Espacio para el desarrollo del juego -->
+            <h1>Resultado de la partida:</h1>
+            <div class="resultado">
+                <div id="jugadaPC"></div>
+                <div id="resultadoJugada"></div>
+            </div>
+
+        </article>
+
+    </body>
+    
+</html>
