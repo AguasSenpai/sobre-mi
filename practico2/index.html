@@ -23,29 +23,55 @@
         
         <article>
             
-            <!-- Espacio para nombre de jugador -->
-            <h1>Coloque su nombre:</h1>
+            <div style="display:block; width:100%; margin-top:-40px;">
+
+                <div style="width: 40%; float: left;">
+                    <!-- Espacio para nombre de jugador -->
+                    <h1>Coloque su nombre:</h1>
             
-            <div class="container">
-                <div class="block">
-                    <input type="text" name="player" id="player" required="required" style="width: 450px;"/>
+                    <div class="container">
+                        <div class="block">
+                            <input type="text" name="player" id="player" style="width: 200px;"/>
+                        </div>
+                    </div>
+            
+                    <!-- Espacio para seleccionar jugada -->
+                    <h1>Elija su jugada:</h1>
+                    <div class="base">
+                        <input type="button" name="piedra" class="botonPiedra" onclick="jugadaPiedra()"/>
+                        <input type="button" name="papel" class="botonPapel" onclick="jugadaPapel()"/>
+                        <input type="button" name="tijera" class="botonTijera" onclick="jugadaTijera()"/>
+                    </div>
+
+                    <!-- Espacio para el desarrollo del juego -->
+                    <h1>Resultado del intento:</h1>
+                    <div class="resultado">
+                        <div id="jugadaPC"></div>
+                        <div id="resultadoJugada"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Espacio para seleccionar jugada -->
-            <h1>Elija su jugada:</h1>
-            <div class="base">
-                <input type="button" name="piedra" class="botonPiedra" onclick="jugadaPiedra()"/>
-                <input type="button" name="papel" class="botonPapel" onclick="jugadaPapel()"/>
-                <input type="button" name="tijera" class="botonTijera" onclick="jugadaTijera()"/>
+                
+                <div style="width: 60%; float: left;">
+                    <!-- Espacio para mostrar los intentos realizados -->
+                    <p>El juego consistirá de cinco intentos, para luego anunciar a quien cuente con más victorias.</p>
+                    <footer>(¡a menos que haya empate, claro!)</footer>
+                    <hr color="#0b6fff" size="0.5px"/> <hr color="#0b6fff" size="0.5px" style="margin-top: -8px;"/>
+                                        
+                    <!-- COMPLETAR CON RESULTADOS DE INTENTOS, ARMAR JS -->
+                    <p class="center">Intento 1 &darr; <div id=resultadoJugadaUno style="font-size: 25px; color: blue; text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;"></div></p>
+                    <p class="center">Intento 2 &darr; <div id=resultadoJugadaDos style="font-size: 25px; color: blue; text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;"></div></p>
+                    <p class="center">Intento 3 &darr; <div id=resultadoJugadaTres style="font-size: 25px; color: blue; text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;"></div></p>
+                    <p class="center">Intento 4 &darr; <div id=resultadoJugadaCuatro style="font-size: 25px; color: blue; text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;"></div></p>
+                    <p class="center">Intento 5 &darr; <div id=resultadoJugadaCinco style="font-size: 25px; color: blue; text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;"></div></p>
+
+                    <p><u>Resultado de la partida:</u></p>
+                    <div id=resultadoFinal></div>
+                    
+                </div>
+                
             </div>
 
-            <!-- Espacio para el desarrollo del juego -->
-            <h1>Resultado de la partida:</h1>
-            <div class="resultado">
-                <div id="jugadaPC"></div>
-                <div id="resultadoJugada"></div>
-            </div>
+            
 
         </article>
 

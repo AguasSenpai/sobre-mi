@@ -13,6 +13,20 @@ body {
   text-align: center;
 }
 
+p {
+  font-family: 'Handjet', cursive; font-size: 19px; color: black; letter-spacing: 1px;
+  text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
+  margin: 20px;
+  text-align: center;
+  line-height: 15px;
+}
+
+footer {
+  margin-top: -20px;
+  font-size: small;
+  text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
+}
+
 /* Background */
 
 html {
@@ -29,7 +43,7 @@ html {
 /* Secciones específicas */
 
 .container {
-  width: 520px;
+  width: 250px;
   height: auto;
   margin: auto;
   background-color: white;
@@ -37,9 +51,9 @@ html {
 }
 
 .block {
-  width: 500px;
+  width: 200px;
   padding: 5px;
-  margin-left: 5px;
+  margin-left: 15px;
   display: block;
   writing-mode: horizontal-tb;
   box-sizing: content-box;
@@ -92,4 +106,9 @@ input[type=button] {
   font-family: 'Handjet', cursive; font-size: 40px; color: black; letter-spacing: 1px;
   margin: 20px;
   text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
