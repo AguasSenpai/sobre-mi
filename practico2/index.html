@@ -38,9 +38,9 @@
                     <!-- Espacio para seleccionar jugada -->
                     <h1>Elija su jugada:</h1>
                     <div class="base">
-                        <input type="button" name="piedra" class="botonPiedra" onclick="jugadaPiedra()"/>
-                        <input type="button" name="papel" class="botonPapel" onclick="jugadaPapel()"/>
-                        <input type="button" name="tijera" class="botonTijera" onclick="jugadaTijera()"/>
+                        <button type="button" id="piedra" class="botonPiedra" onclick="juegoppot(piedra)"></button>
+                        <button type="button" id="papel" class="botonPapel" onclick="juegoppot(papel)"></button>
+                        <button type="button" id="tijera" class="botonTijera" onclick="juegoppot(tijera)"></button>
                     </div>
 
                     <!-- Espacio para el desarrollo del juego -->
@@ -66,6 +66,8 @@
 
                     <p><u>Resultado de la partida:</u></p>
                     <div id=resultadoFinal></div>
+                    <input type="hidden" id="victorias" value="0">
+                    <input type="hidden" id="derrotas" value="0">
                     
                 </div>
                 
