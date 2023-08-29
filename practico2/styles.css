@@ -102,6 +102,13 @@ button {
   border: none;
 }
 
+.botonActualizar {
+  background: url(refresh.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+}
+
 .resultado {
   font-family: 'Handjet', cursive; font-size: 40px; color: black; letter-spacing: 1px;
   margin: 20px;

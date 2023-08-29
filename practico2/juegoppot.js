@@ -6,8 +6,6 @@ function juegoppot(x) {
     let jugadasPosibles = ["piedra", "papel", "tijera"];
     jugadaPC = jugadasPosibles[Math.floor(Math.random() * (Math.floor(2) - Math.ceil(0) + 1) + Math.ceil(0))];
     let resultadosPosibles = ["VICTORIA", "EMPATE", "DERROTA"];
-    let victorias = document.getElementById("victorias").value;
-    let derrotas = document.getElementById("derrotas").value;
 
     if (nombreUser == "") {
 
@@ -23,6 +21,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 4;
+                    victorias = 0;
+                    derrotas = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 3;
@@ -35,6 +35,13 @@ function juegoppot(x) {
                 } else if (document.getElementById("resultadoJugadaCinco").innerHTML == "") {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 0;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             } else if (jugadaPC == jugadasPosibles[1]) {
                 document.getElementById("jugadaPC").innerHTML = "Tu oponente ha elegido " + jugadaPC + ".";
@@ -42,7 +49,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 4;
-                    derrotas = derrotas + 1;
+                    derrotas = 1;
+                    victorias = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 3;
@@ -59,6 +67,13 @@ function juegoppot(x) {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 0;
                     derrotas = derrotas + 1;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             } else if (jugadaPC == jugadasPosibles[2]) {
                 document.getElementById("jugadaPC").innerHTML = "Tu oponente ha elegido " + jugadaPC + ".";
@@ -66,7 +81,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 4;
-                    victorias = victorias + 1;
+                    victorias = 1;
+                    derrotas = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 3;
@@ -83,20 +99,15 @@ function juegoppot(x) {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 0;
                     victorias = victorias + 1;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             };
-        };
-
-        if (intentosRestantes == 0) {
-
-            if (victorias < 3 && derrotas < 3) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
-            } else if (victorias > derrotas) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
-            } else if (derrotas > victorias) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
-            };
-
         };
 
     } else if (x = papel) {
@@ -109,6 +120,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 4;
+                    victorias = 0;
+                    derrotas = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 3;
@@ -121,6 +134,13 @@ function juegoppot(x) {
                 } else if (document.getElementById("resultadoJugadaCinco").innerHTML == "") {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 0;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             } else if (jugadaPC == jugadasPosibles[2]) {
                 document.getElementById("jugadaPC").innerHTML = "Tu oponente ha elegido " + jugadaPC + ".";
@@ -128,7 +148,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 4;
-                    derrotas = derrotas + 1;
+                    derrotas = 1;
+                    victorias = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 3;
@@ -145,6 +166,13 @@ function juegoppot(x) {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 0;
                     derrotas = derrotas + 1;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             } else {
                 document.getElementById("jugadaPC").innerHTML = "Tu oponente ha elegido " + jugadaPC + ".";
@@ -152,7 +180,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 4;
-                    victorias = victorias + 1;
+                    victorias = 1;
+                    derrotas = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 3;
@@ -169,20 +198,15 @@ function juegoppot(x) {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 0;
                     victorias = victorias + 1;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             };
-        };
-
-        if (intentosRestantes == 0) {
-
-            if (victorias < 3 && derrotas < 3) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
-            } else if (victorias > derrotas) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
-            } else if (derrotas > victorias) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
-            };
-
         };
 
     } else {
@@ -195,6 +219,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 4;
+                    victorias = 0;
+                    derrotas = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 3;
@@ -207,6 +233,13 @@ function juegoppot(x) {
                 } else if (document.getElementById("resultadoJugadaCinco").innerHTML == "") {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[1];
                     intentosRestantes = 0;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             } else if (jugadaPC == jugadasPosibles[0]) {
                 document.getElementById("jugadaPC").innerHTML = "Tu oponente ha elegido " + jugadaPC + ".";
@@ -214,7 +247,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 4;
-                    derrotas = derrotas + 1;
+                    derrotas = 1;
+                    victorias = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 3;
@@ -231,6 +265,13 @@ function juegoppot(x) {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[2];
                     intentosRestantes = 0;
                     derrotas = derrotas + 1;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             } else {
                 document.getElementById("jugadaPC").innerHTML = "Tu oponente ha elegido " + jugadaPC + ".";
@@ -238,7 +279,8 @@ function juegoppot(x) {
                 if (document.getElementById("resultadoJugadaUno").innerHTML == "") {
                     document.getElementById("resultadoJugadaUno").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 4;
-                    victorias = victorias + 1;
+                    victorias = 1;
+                    derrotas = 0;
                 } else if (document.getElementById("resultadoJugadaDos").innerHTML == "") {
                     document.getElementById("resultadoJugadaDos").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 3;
@@ -255,20 +297,15 @@ function juegoppot(x) {
                     document.getElementById("resultadoJugadaCinco").innerHTML = resultadosPosibles[0];
                     intentosRestantes = 0;
                     victorias = victorias + 1;
+                    if (victorias < 3 && derrotas < 3) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
+                    } else if (victorias > derrotas) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
+                    } else if (derrotas > victorias) {
+                        document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
+                    };
                 };
             };
-        };
-
-        if (intentosRestantes == 0) {
-
-            if (victorias < 3 && derrotas < 3) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Ha sido empate! Actualiza la página para iniciar otra partida.";
-            } else if (victorias > derrotas) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Eres el ganador! Actualiza la página para iniciar otra partida.";
-            } else if (derrotas > victorias) {
-                document.getElementById("resultadoFinal").innerHTML = "¡Eres el perdedor! Actualiza la página para iniciar otra partida.";
-            };
-
         };
 
     };
